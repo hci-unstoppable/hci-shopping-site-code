@@ -1,19 +1,7 @@
 {
-  "name": "shopping-cart-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JakubUrbaniak/shopping-cart-site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JakubUrbaniak/shopping-cart-site/issues"
-  },
-  "homepage": "https://github.com/JakubUrbaniak/shopping-cart-site#readme"
+  "devDependencies": {
+    "chromedriver": "^98.0.0",
+    "geckodriver": "^3.0.1",
+    "nightwatch": "^2.0.6"
+  }
 }
