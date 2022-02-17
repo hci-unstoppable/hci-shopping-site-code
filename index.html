@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Checkout</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../assets/screen.css">
     <link rel="icon" href="#" />
@@ -11,8 +12,8 @@
     </header>
 
     <main id="main">
-      <form name="personal-information" action="preferences" aria-labelledby="form-label">
-        <h2 id="required-information">Please input all required fields</h2>
+      <form name="personal-information" action="preferences" aria-labelledby="required-information">
+        <h2 id="required-information">Please input all required fields for your Personal Information</h2>
 
         <fieldset>
           <ol>
@@ -27,8 +28,8 @@
             <li>
               <label for="phone">Enter your phone number (For shipping updates)</label>
               <input type="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-              <details>Phone number format: (x-xxx-xxx-xxxx)</details>
-              <!---above is a filler until I learn a better way to self-format--->
+              <label>Phone number format: (x-xxx-xxx-xxxx)</label>
+              <!---above is a filler until I learn a better way to self-format-->
             </li>
           </ol>
         </fieldset>
@@ -38,20 +39,20 @@
 
           <ol id="items-in-cart">
             <li>
-              <section>Item 1
-              </section>
+              <label>Item 1
+              </label>
             </li>
             <li>
-              <section>Item 2
-              </section>
+              <label>Item 2
+              </label>
             </li>
             <li>
-              <section>Item 3
-              </section>
+              <label>Item 3
+              </label>
             </li>
             <li>
-              <section>Item 4
-              </section>
+              <label>Item 4
+              </label>
             </li>
             <!--2 lines for closing section element to leave/remind about needed price category-->
           </ol>
