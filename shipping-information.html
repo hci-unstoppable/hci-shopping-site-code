@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkout</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/screen.css"/>
+    <link rel="icon" href="#" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Shipping Information</h1>
+    </header>
+
+    <main id="main">
+      <form name="personal-information" action="preferences" aria-labelledby="required-information">
+        <h2 id="required-information">Please select your preferred shipping option and fill out your Delivery Address</h2>
+
+        <fieldset>
+          <label for="shipping-options">Choose Shipping Option</label>
+            <select name="shipping-options" id="shipping-options">
+              <option value="standard">Standard (5-8 Business Days)</option>
+              <option value="express">Express (3-5 Business Days)</option>
+              <option value="two-day">Two Day Shipping</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+          <h2 id="shipping-address">Shipping Address</h2>
+          <ol>
+            <li>
+              <label for="street-address">Street Address</label>
+              <input type="text" id="street-address" name="street-address"/>
+            </li>
+            <li>
+              <label for="city-name">City</label>
+              <input type="text" id="city-name" name="city=name"/>
+            </li>
+            <li>
+              <label for="state-name">State</label>
+              <input type="text" id="state-name" name="state-name"/>
+            </li>
+            <li>
+              <label for="zip-code">Zip Code</label>
+              <input type="number" id="zip-code" name="zip-code"/>
+            </li>
+          </ol>
+        </fieldset>
+
+        <fieldset>
+          <h2 id="shopping-cart">Items in Cart: </h2>
+
+          <ol id="items-in-cart">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+            <li>
+              Item 4
+            </li>
+            <!--2 lines for closing li element to leave/remind about needed price category-->
+          </ol>
+        </fieldset>
+
+        <button type="submit">Continue to Payment Information</button>
+        <!--button tag is banned under Stolley style html, filler until future notice-->
+      </form>
+    </main>
+  </body>
+</html>
