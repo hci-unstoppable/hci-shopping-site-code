@@ -8,3 +8,18 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 /*New colors branch*/
+
+html {
+  font-family: "Playfair Display", "Didot", Arial, sans-serif;
+  font-size: 1em; /* 16/16 = 1*/
+  line-height: 1.125em;  /* 18/16 = 1.125*/
+  color: #DCDCDC;
+  background-color: #2a2727;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em;
+}
