@@ -15,10 +15,8 @@ html {
   line-height: 1.125em;  /* 18/16 = 1.125*/
   color: #DCDCDC;
   background-color: #2a2727;
-}
-
-.personal-information {
   display: flex;
+  justify-content: center;
 }
 
 header {
@@ -28,18 +26,24 @@ header {
   margin: 1em; /* 16/16 - 1*/
 }
 
-#required-personal-information {
+#required-personal-information,
+#required-shipping-information,
+#shipping-options,
+#required-payment-information,
+#card-information,
+#billing-address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: .5em; /*8/16 = .25 */
-  margin-bottom: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
 }
 
-#personal-information-fields {
+#personal-information-fields,
+#shipping-address {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
