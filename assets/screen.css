@@ -17,6 +17,10 @@ html {
   background-color: #2a2727;
 }
 
+.personal-information {
+  display: flex;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -28,8 +32,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: .25em; /*4/16 = .25 */
-  margin-bottom: .25em;
+  align-items: center;
+  margin-top: .5em; /*8/16 = .25 */
+  margin-bottom: .5em;
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -39,10 +44,11 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: .25em; /*4/16 = .25 */
-  margin-bottom: .25em;
+  margin-top: .5em; /*8/16 = .25 */
+  margin-bottom: .5em;
   margin-left: 1em;
   margin-right: 1em;
+
 }
 
 #phone-format {
@@ -55,4 +61,21 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin: 1em; /* 16/16 - 1*/
+}
+
+#items-in-cart {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin-top: .5em; /*8/16 = .25 */
+  margin-bottom: .5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#continue-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin: 1em;
 }
