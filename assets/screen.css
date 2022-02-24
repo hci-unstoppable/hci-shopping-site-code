@@ -19,7 +19,8 @@ html {
   justify-content: center;
 }
 
-header {
+header,
+#sale-confirmation {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
