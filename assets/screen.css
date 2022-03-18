@@ -51,6 +51,7 @@ fieldset {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
+
 #personal-information-fields,
 #shipping-information-fields,
 #payment-information-fields,
@@ -72,17 +73,25 @@ fieldset {
   padding: 1em;
 }
 
-
-
-
-
 @media (min-width: 768px) {
   fieldset {
     padding: .5em;
     border: 2px solid #DCDCDC;
   }
 
-  #personal-information-fields {
+  #shipping-address,
+  #card-information,
+  #billing-address {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+  }
+  
+  #personal-information-fields,
+  #shipping-information-fields,
+  #payment-information-fields,
+  #billing-address-fields {
     display: grid;
     gap: 1.5em; /*24/16 = 1.5*/
     grid-template-columns: repeat(2, 1fr);
@@ -93,7 +102,8 @@ fieldset {
     justify-content: center;
   }
 
-  #items-in-cart {
+  #items-in-cart,
+  #shipping-options {
     border: 2px solid #DCDCDC;
     padding: 1em;
   }
