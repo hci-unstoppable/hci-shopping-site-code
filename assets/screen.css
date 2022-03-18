@@ -31,7 +31,9 @@ header {
 
 #required-personal-information,
 #required-shipping-information,
-#required-payment-information {
+#required-payment-information,
+#confirmation,
+#sale-confirmation {
   display: flex;
   justify-content: center;
 }
