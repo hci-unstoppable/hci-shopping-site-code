@@ -23,7 +23,62 @@ html {
 
 header {
   font-size: 2em; /*32/16 = 2*/
-  padding: 0.5em; /*8/16 = 2*/
+  line-height: 1.125em; /*18/16 = 2.125*/
+  padding: 0.5em; /*8/16 = .5*/
   background-color: #2E1114;
   color: #ADADAD;
+}
+
+#required-personal-information {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  padding: .5em;
+  border: 2px solid #DCDCDC;
+}
+
+#personal-information-fields {
+  display: grid;
+  gap: 1.5em; /*24/16 = 1.5*/
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#shopping-cart {
+  padding-top: 1.25em;
+  display: flex;
+  justify-content: center;
+}
+
+#items-in-cart {
+  border: 2px solid #DCDCDC;
+  padding: 1em;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  fieldset {
+    padding: .5em;
+    border: 2px solid #DCDCDC;
+  }
+
+  #personal-information-fields {
+    display: grid;
+    gap: 1.5em; /*24/16 = 1.5*/
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #shopping-cart {
+    display: flex;
+    justify-content: center;
+  }
+
+  #items-in-cart {
+    border: 2px solid #DCDCDC;
+    padding: 1em;
+  }
 }
