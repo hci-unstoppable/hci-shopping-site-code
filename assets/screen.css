@@ -29,7 +29,8 @@ header {
   color: #ADADAD;
 }
 
-#required-personal-information {
+#required-personal-information,
+#required-shipping-information {
   display: flex;
   justify-content: center;
 }
@@ -39,7 +40,14 @@ fieldset {
   border: 2px solid #DCDCDC;
 }
 
-#personal-information-fields {
+#shipping-address {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+#personal-information-fields,
+#shipping-information-fields {
   display: grid;
   gap: 1.5em; /*24/16 = 1.5*/
   grid-template-columns: repeat(1, 1fr);
@@ -51,7 +59,8 @@ fieldset {
   justify-content: center;
 }
 
-#items-in-cart {
+#items-in-cart,
+#shipping-options {
   border: 2px solid #DCDCDC;
   padding: 1em;
 }
