@@ -13,7 +13,7 @@
 
     <main id="main">
       <form name="personal-information" action="preferences" aria-labelledby="required-personal-information">
-        <h2 id="required-personal-information">Please input all required fields for Personal Information</h2>
+        <h2 id="required-personal-information">Please input all required fields for your Personal Information</h2>
 
         <fieldset>
           <ol id="personal-information-fields">
@@ -30,13 +30,9 @@
               <input type="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
               <!---above is a filler until I learn a better way to self-format-->
             </li>
-            <li>
-              <label for="phone" id="phone-format">Phone number format: (x-xxx-xxx-xxxx)</label>
-            </li>
           </ol>
         </fieldset>
 
-        <fieldset>
           <h2 id="shopping-cart">Items in Cart: </h2>
 
           <ol id="items-in-cart">
@@ -54,7 +50,6 @@
             </li>
             <!--2 lines for closing li element to leave/remind about needed price category-->
           </ol>
-        </fieldset>
 
         <button type="submit" id="continue-button">Continue to Shipping Information</button>
       </form>
