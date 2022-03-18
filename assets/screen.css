@@ -30,7 +30,8 @@ header {
 }
 
 #required-personal-information,
-#required-shipping-information {
+#required-shipping-information,
+#required-payment-information {
   display: flex;
   justify-content: center;
 }
@@ -40,16 +41,20 @@ fieldset {
   border: 2px solid #DCDCDC;
 }
 
-#shipping-address {
+#shipping-address,
+#card-information,
+#billing-address {
   display: flex;
   justify-content: center;
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
 #personal-information-fields,
-#shipping-information-fields {
+#shipping-information-fields,
+#payment-information-fields,
+#billing-address-fields {
   display: grid;
-  gap: 1.5em; /*24/16 = 1.5*/
+  gap: 1.125em;
   grid-template-columns: repeat(1, 1fr);
 }
 
