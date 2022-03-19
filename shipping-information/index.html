@@ -15,7 +15,7 @@
       <form name="shipping-information" action="preferences" aria-labelledby="required-shipping-information">
         <h2 id="required-shipping-information">Please select your preferred shipping option and fill out your Delivery Address</h2>
 
-        <fieldset>
+        <fieldset name="shipping-choice">
           <label for="shipping-options">Choose Shipping Option</label>
             <select name="shipping-options" id="shipping-options">
               <option value="standard">Standard (5-8 Business Days)</option>
@@ -24,7 +24,7 @@
             </select>
         </fieldset>
 
-        <fieldset>
+        <fieldset name="shipping-location">
           <h2 id="shipping-address">Shipping Address</h2>
           <ol id="shipping-information-fields">
             <li>
