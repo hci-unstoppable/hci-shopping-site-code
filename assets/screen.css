@@ -87,7 +87,7 @@ fieldset {
     padding-top: 1.25em;
     padding-bottom: 1.25em;
   }
-  
+
   #personal-information-fields,
   #shipping-information-fields,
   #payment-information-fields,
@@ -106,5 +106,13 @@ fieldset {
   #shipping-options {
     border: 2px solid #DCDCDC;
     padding: 1em;
+  }
+
+  #item1,
+  #item2,
+  #item3,
+  #item4 {
+    display: flex;
+    justify-content: center;
   }
 }
