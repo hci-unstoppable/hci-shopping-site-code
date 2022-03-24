@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="shipping-information-page">
   <head>
     <title>Checkout</title>
     <meta charset="utf-8" />
@@ -16,8 +16,9 @@
         <h2 id="required-shipping-information">Please select your preferred shipping option and fill out your Delivery Address</h2>
 
         <fieldset name="shipping-choice">
-          <label for="shipping-options">Choose Shipping Option</label>
+          <label for="shipping-options">Select A Shipping Option</label>
             <select name="shipping-options" id="shipping-options">
+              <option value="options">Shipping Options:</option>
               <option value="standard">Standard (5-8 Business Days)</option>
               <option value="express">Express (3-5 Business Days)</option>
               <option value="two-day">Two Day Shipping</option>
@@ -68,6 +69,6 @@
         <!--button tag is banned under Stolley style html, filler until future notice-->
       </form>
     </main>
-    <script src="js/site.js"></script>
+    <script src="../js/site.js"></script>
   </body>
 </html>
