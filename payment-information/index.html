@@ -20,24 +20,21 @@
           <ol id="payment-information-fields">
             <li>
               <label for="name-on-card">Name On Card</label>
-              <input type="text" id="name-on-card" name="name-on-card"/>
+              <input type="text" id="name-on-card" name="name-on-card" autocomplete="cc-name"/>
             </li>
             <li>
               <label for="card-number">Number on Card</label>
-              <input type="number" id="card-number" name="card-number"/>
+              <input type="text" id="card-number" name="card-number" autocomplete="cc-number"/>
             </li>
             <li>
               <label for="date-on-card">Date On Card</label>
-              <input type="month" id="date-on-card" name="date-on-card"/>
+              <input type="month" id="date-on-card" name="date-on-card" autocomplete="cc-exp"/>
             </li>
             <li>
               <label for="cvv-number">CVV Number (On Back Of Card)</label>
-              <input type="number" id="cvv-number" name="cvv-number"/>
+              <input type="text" id="cvv-number" name="cvv-number" autocomplete="cc-csc"/>
             </li>
             <li>
-              <label for="exp-date">Expiration Date</label>
-              <input type="number" id="exp-date" name="exp-date"/>
-            </li>
           </ol>
         </fieldset>
 
@@ -50,15 +47,15 @@
             </li>
             <li>
               <label for="city-name">City</label>
-              <input type="text" id="city-name" name="city=name"/>
+              <input type="text" id="city-name" name="city=name" autocomplete="address-level2"/>
             </li>
             <li>
               <label for="state-name">State</label>
-              <input type="text" id="state-name" name="state-name"/>
+              <input type="text" id="state-name" name="state-name" autocomplete="address-level1"/>
             </li>
             <li>
               <label for="zip-code">Zip Code</label>
-              <input type="number" id="zip-code" name="zip-code"/>
+              <input type="text" id="zip-code" name="zip-code" autocomplete="postal-code" />
             </li>
           </ol>
         </fieldset>
