@@ -6,17 +6,19 @@ By signing this contract you agree to the following terms.
 4. Please inform the group about any troubles or emergencies that will prevent you from completing your work. Things happen and we're a group, we just don't want to be left in the dark and assume the worst.
 5. Commits must have messages that begin with a verb followed by a description of what changes have occured.
 6. Make rigorous use of the linters Professor Stolley has provided us to ensure code quality.
-7. We will strive to follow all requirements of Project 2
+7. Strive to follow all requirements of Project 2 and 3
 
 # Penalities
 In the unfortunate and unlikely event that the terms of this contract are not upheld, the following consequences will occur.
 1. If the group has evidence that you have not been communicating with us on top of not meeting your contributions, we will issue a warning by email.
-2. Repeated lack of contribution and communication will result in us contacting Professor Stolley. Should we reach this point, this is the final warning and next consequence will be drastic.
+2. Repeated lack of contribution and communication will result in us contacting Professor Stolley. Should we reach this point, this is the final warning and the next consequence will be drastic.
 3. After exhausting all options, we will vote to contact Professor Stolley to inform him that we have removed you from our team project. This penality will be extremely unlikely to occur unless such actions have forced our hands.
 
 # Signature
 
 By writing your name below, you agree to the terms of this contract as written on March 24th, 2022. Please pull this repository, add your name to this file CONTRACT.md, and then commit the changes. This will serve as evidence that you read the terms as well as have this repository for our future work.
+
+Revised 03/31/2022
 
 Sean Khuon
 Jakub Urbaniak
