@@ -24,7 +24,7 @@ if (html.id === "personal-information-page") {
       error.push('Name is required')
     }
 
-    if (phone.value.length <= 9 || phone.value.lenght > 12) {
+    if (phone.value.length <= 9 || phone.value.length > 12) {
       error.push("Not a Real Phone Number")
     }
 
