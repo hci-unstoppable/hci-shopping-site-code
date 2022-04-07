@@ -44,6 +44,35 @@ const productN3 = document.querySelector('.item3');
 const productN4 = document.querySelector('.item4');
 
 
+const calculateSumPriceN1 = function() {
+  let sumPrice = 0;
+  cartProducts.forEach(product => {
+    sumPrice += productN1.price;
+  });
+  return sumPrice;
+}
+
+const updateProductsInCartHTML() = function() {
+  if(cartProducts.length > 0) {
+    let result = cartProducts.map(productN1 => ) {
+      return '
+      <li>
+        <label for="productN1.name">Mug $<span class="productN1.value"/>13.99</label>
+        <button type="button" class="add-item-button" data-product-id="productID">Add to cart: </button>
+      </li>
+      '
+    });
+    parentElement.innerHTML = result.join('');
+    document.querySelector('.shopping-cart').classList.remove('hidden');
+    totalPrice.innerHTML = "$" + calculateSumPriceN1;
+  }
+  else{
+    document.querySelector('.shopping-cart').classList.add('hidden');
+    parentElement.innerHTML = "Your Shopping Cart is Empty";
+    totalPrice.innerHTML = "";
+  }
+}
+
 function updateProductsInCart(productN1) {
   for(let i=0; i < cartProducts.length; i++) {
     if(cartProducts[i].id == productN1.id) {
@@ -79,3 +108,25 @@ productN1.forEach(product => {
     }
   })
 })
+
+parentElement.addEventListener('click', (addEventListener) => {
+  const addItem = event.target.classList.contains('add-item-button');
+  const removeItem = event.target.classList.contains('remove-button');
+  if(addItem || removeButton) {
+    for(let i=0; i < cartProducts.length; i++) {
+      if(cartProducts[i].id === event.target.dataset.id) {
+        if(addItem) {
+          cartProducts[i].count += 1;
+        }
+        else if(removeItem) {
+          cartProducts[i].count -= 1;
+        }
+        cartProducts[i].price = productsInCart[i].basePrice * productsInCart[i].count;
+      }
+      if(cartProducts[i].count <= 0) (
+        cartProducts.splice(i, 1);
+      )
+    }
+    updateProductsInCartHTML();
+  }
+}
