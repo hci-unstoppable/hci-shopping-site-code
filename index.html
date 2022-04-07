@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" id="personal-information-page">
+<html lang="en" id="shopping-page">
   <head>
-    <title>Checkout</title>
+    <title>Shop</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/screen.css"/>
     <link rel="icon" href="#" />
@@ -12,47 +12,60 @@
     </header>
 
     <main id="main">
-      <form name="personal-information" id="personal-information" action="preferences" aria-labelledby="required-personal-information">
-        <h2 id="required-personal-information">Please input all required fields for your Personal Information</h2>
+      <form name="store-items" id="store-items" action="preferences" aria-labelledby="store-items">
+        <h2 id="available-store-items">Items For Sale: </h2>
 
-        <fieldset name="personal-information-field">
-          <ol id="personal-information-fields">
+        <fieldset name="store-item-field">
+          <ol id="store-items-for-sale">
             <li>
-              <label for="full-name">Full Name: </label>
-              <input type="text" id="full-name" name="full-name" autocomplete="name" required="required"/>
+              <label for="mug">Mug $<span class="value"/>13.99</label>
+              <button type="button" class="add-item-button" data-product-id="1">Add to cart: </button>
             </li>
             <li>
-              <label for="email">Email address: </label>
-              <input type="email" name="email" id="email" autocomplete="email" required="required"/>
+              <label for="cup">Cup $<span class="value"/>11.99</label>
+              <button type="button" class="add-item-button" data-product-id="2">Add to cart: </button>
             </li>
             <li>
-              <label for="phone">Phone Number (For shipping updates): </label>
-              <input type="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel"/>
-              <!---above is a filler until I learn a better way to self-format-->
+              <label for="table-mat">Table Mat $<span class="value"/>3.99</label>
+              <button type="button" class="add-item-button" data-product-id="3">Add to cart: </button>
+            </li>
+            <li>
+              <label for="napkin">Napkins (50 ct.) $<span class="value"/>5.99</label>
+              <button type="button" class="add-item-button" data-product-id="4">Add to cart: </button>
             </li>
           </ol>
         </fieldset>
 
-          <h2 id="shopping-cart">Items in Cart: </h2>
+          <h2 id="shopping-cart" class="shopping-cart">Items in Cart: </h2>
 
           <ol id="items-in-cart">
-            <li id="item1">
-              Item 1
+            <li id="item1" class="item1">
+              Mug
+                <input class="cart-quantity" type="number" value="0"/>
+                <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item2">
-              Item 2
+            <li id="item2" class="item2">
+              Cup
+                <input class="cart-quantity" type="number" value="0"/>
+                  <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item3">
-              Item 3
+            <li id="item3" class="item3">
+              Table Mate
+                <input class="cart-quantity" type="number" value="0"/>
+                  <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item4">
-              Item 4
+            <li id="item4" class="item4">
+              Napkins
+                <input class="cart-quantity" type="number" value="0"/>
+                  <button type="button" class="remove-button">Remove</button>
             </li>
             <!--2 lines for closing li element to leave/remind about needed price category-->
           </ol>
 
+          <h3 id="total"> Total: </h3>
+
         <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
-      </form>
+      </form>ormaction="shipping-information">Continue to Shipping Information</button>
     </main>
     <script src="js/site.js"></script>
   </body>
