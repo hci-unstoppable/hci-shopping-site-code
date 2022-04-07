@@ -12,25 +12,50 @@
     </header>
 
     <main id="main">
-      
+      <form name="store-items" id="store-items" action="preferences" aria-labelledby="store-items">
+        <h2 id="available-store-items">Items For Sale: </h2>
 
-      <ol id="items-in-cart">
-        <li id="item1">
-          Item 1
-        </li>
-        <li id="item2">
-          Item 2
-        </li>
-        <li id="item3">
-          Item 3
-        </li>
-        <li id="item4">
-          Item 4
-        </li>
-        <!--2 lines for closing li element to leave/remind about needed price category-->
-      </ol>
+        <fieldset name="store-item-field">
+          <ol id="store-items-for-sale">
+            <li>
+              <label for="mug">Mug</label>
+              <button type="button" class="item-button">Add to cart: $14.99</button>
+            </li>
+            <li>
+              <label for="cup">Cup</label>
+              <button type="button" class="item-button">Add to cart: $11.99</button>
+            </li>
+            <li>
+              <label for="table-mat">Table Mat</label>
+              <button type="button" class="item-button">Add to cart: $3.99</button>
+            </li>
+            <li>
+              <label for="napkin">Napkins (50 ct.)</label>
+              <button type="button" class="item-button">Add to cart: $5.99</button>
+            </li>
+          </ol>
+        </fieldset>
 
-      <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
+          <h2 id="shopping-cart">Items in Cart: </h2>
+
+          <ol id="items-in-cart">
+            <li id="item1">
+              Item 1
+            </li>
+            <li id="item2">
+              Item 2
+            </li>
+            <li id="item3">
+              Item 3
+            </li>
+            <li id="item4">
+              Item 4
+            </li>
+            <!--2 lines for closing li element to leave/remind about needed price category-->
+          </ol>
+
+        <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
+      </form>ormaction="shipping-information">Continue to Shipping Information</button>
     </main>
     <script src="js/site.js"></script>
   </body>
