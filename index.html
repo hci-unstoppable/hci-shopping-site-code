@@ -18,20 +18,20 @@
         <fieldset name="store-item-field">
           <ol id="store-items-for-sale">
             <li>
-              <label for="mug">Mug</label>
-              <button type="button" class="item-button">Add to cart: $14.99</button>
+              <label for="mug">Mug $<span class="value"/>13.99</label>
+              <button type="button" class="add-item-button" data-product-id="1">Add to cart: </button>
             </li>
             <li>
-              <label for="cup">Cup</label>
-              <button type="button" class="item-button">Add to cart: $11.99</button>
+              <label for="cup">Cup $<span class="value"/>11.99</label>
+              <button type="button" class="add-item-button" data-product-id="2">Add to cart: </button>
             </li>
             <li>
-              <label for="table-mat">Table Mat</label>
-              <button type="button" class="item-button">Add to cart: $3.99</button>
+              <label for="table-mat">Table Mat $<span class="value"/>3.99</label>
+              <button type="button" class="add-item-button" data-product-id="3">Add to cart: </button>
             </li>
             <li>
-              <label for="napkin">Napkins (50 ct.)</label>
-              <button type="button" class="item-button">Add to cart: $5.99</button>
+              <label for="napkin">Napkins (50 ct.) $<span class="value"/>5.99</label>
+              <button type="button" class="add-item-button" data-product-id="4">Add to cart: </button>
             </li>
           </ol>
         </fieldset>
@@ -39,28 +39,30 @@
           <h2 id="shopping-cart">Items in Cart: </h2>
 
           <ol id="items-in-cart">
-            <li id="item1">
+            <li id="item1" class="item1">
               Mug
                 <input class="cart-quantity" type="number" value="0"/>
                 <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item2">
+            <li id="item2" class="item2">
               Cup
                 <input class="cart-quantity" type="number" value="0"/>
                   <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item3">
+            <li id="item3" class="item3">
               Table Mate
                 <input class="cart-quantity" type="number" value="0"/>
                   <button type="button" class="remove-button">Remove</button>
             </li>
-            <li id="item4">
+            <li id="item4" class="item4">
               Napkins
                 <input class="cart-quantity" type="number" value="0"/>
                   <button type="button" class="remove-button">Remove</button>
             </li>
             <!--2 lines for closing li element to leave/remind about needed price category-->
           </ol>
+
+          <h3 id="total"> Total: </h3>
 
         <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
       </form>ormaction="shipping-information">Continue to Shipping Information</button>
