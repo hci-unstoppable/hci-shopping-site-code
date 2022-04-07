@@ -1,4 +1,4 @@
-const validate = function(ev){
+/*const validate = function(ev){
   if (html.id === "shipping-information-page") {
       let failure = []
       //for select statements
@@ -32,5 +32,50 @@ if (html.id === "personal-information-page") {
       e.preventDefault()
       errorElement.innerText = error.join(', ')
     }
-  )}
+  })
+}*/
+
+let cartProducts = [];
+const parentElement = document.querySelector("#items-in-cart");
+const totalPrice = document.querySelector("#total");
+const productN1 = document.querySelector('.item1');
+const productN2 = document.querySelector('.item2');
+const productN3 = document.querySelector('.item3');
+const productN4 = document.querySelector('.item4');
+
+
+function updateProductsInCart(productN1) {
+  for(let i=0; i < cartProducts.length; i++) {
+    if(cartProducts[i].id == productN1.id) {
+      cartProducts[i].count += 1;
+      cartProducts[i].price = cartProducts[i].basePrice * cartProducts[i].count;
+      return;
+    }
+  }
+  cartProducts.push(productN1);
 }
+
+
+
+productN1.forEach(product => {
+  product.addEventListener('click', (event) => {
+    if(event.target.classList.contains('add-item-button')) {
+      const productID = event.target.dataset.productID;
+      const productName = product.querySelector('item1').innerHTML;
+      const productPrice = product.querySelector('value').innerHTML;
+      //const productImage = product.querySelector(img).src;
+      let addProductToCart = {
+        name: mug.
+        //productImage
+        id: productID,
+        count: 1,
+        price: +productPrice,
+        basePrice: +productPrice
+      }
+      updateProductsInCart(addProductToCart);
+      updateProductsInCartHTML();
+
+
+    }
+  })
+})
