@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" id="personal-information-page">
+  <head>
+    <title>Checkout</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/screen.css"/>
+    <link rel="icon" href="#" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Items And Corporation</h1>
+    </header>
+
+    <main id="main">
+      <form name="personal-information" id="personal-information" action="preferences" aria-labelledby="required-personal-information">
+        <h2 id="required-personal-information">Please input all required fields for your Personal Information</h2>
+
+        <fieldset name="personal-information-field">
+          <ol id="personal-information-fields">
+            <li>
+              <label for="full-name">Full Name: </label>
+              <input type="text" id="full-name" name="full-name" autocomplete="name" required="required"/>
+            </li>
+            <li>
+              <label for="email">Email address: </label>
+              <input type="email" name="email" id="email" autocomplete="email" required="required"/>
+            </li>
+            <li>
+              <label for="phone">Phone Number (For shipping updates): </label>
+              <input type="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel"/>
+              <!---above is a filler until I learn a better way to self-format-->
+            </li>
+          </ol>
+        </fieldset>
+
+          <h2 id="shopping-cart">Items in Cart: </h2>
+
+          <ol id="items-in-cart">
+            <li id="item1">
+              Item 1
+            </li>
+            <li id="item2">
+              Item 2
+            </li>
+            <li id="item3">
+              Item 3
+            </li>
+            <li id="item4">
+              Item 4
+            </li>
+            <!--2 lines for closing li element to leave/remind about needed price category-->
+          </ol>
+
+        <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
+      </form>
+    </main>
+    <script src="js/site.js"></script>
+  </body>
+</html>
