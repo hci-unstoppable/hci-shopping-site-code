@@ -73,6 +73,16 @@ fieldset {
   padding: 1em;
 }
 
+.remove-button {
+  padding: 0.5em;
+  background-color: #FF0000;
+}
+
+.add-item-button {
+  padding: 0.5em;
+  background-color: #008000;
+}
+
 @media (min-width: 768px) {
   fieldset {
     padding: .5em;
