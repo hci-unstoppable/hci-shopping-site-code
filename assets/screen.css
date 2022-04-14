@@ -61,7 +61,8 @@ fieldset {
   grid-template-columns: repeat(1, 1fr);
 }
 
-#shopping-cart {
+#shopping-cart,
+#available-store-items {
   padding-top: 1.25em;
   display: flex;
   justify-content: center;
@@ -83,7 +84,8 @@ fieldset {
   background-color: #008000;
 }
 
-@media (min-width: 768px) {
+
+@media and (min-width: 768px) {
   fieldset {
     padding: .5em;
     border: 2px solid #DCDCDC;
@@ -107,7 +109,8 @@ fieldset {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #shopping-cart {
+  #shopping-cart,
+  #available-store-items {
     display: flex;
     justify-content: center;
   }
@@ -124,5 +127,16 @@ fieldset {
   #item4 {
     display: flex;
     justify-content: center;
+  }
+
+
+  .remove-button {
+    padding: 0.5em;
+    background-color: #FF0000;
+  }
+
+  .add-item-button {
+    padding: 0.5em;
+    background-color: #008000;
   }
 }
