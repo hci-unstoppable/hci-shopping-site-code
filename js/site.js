@@ -26,6 +26,15 @@ if (html.id === 'shopping-page') {
 	field.addEventListener('change', updatePrice);
   }
 }
+//-------------------------Event Listeners for Interpage Navigation---------------------
+if(html.id === "shipping-information-page"){
+  var nextButton = document.getElementById('continue-payment');
+  nextButton.addEventListener('click', validateInputs);
+}
+if(html.id === "payment-information-page"){
+  var nextButton = document.getElementById('continue-confirmation');
+  nextButton.addEventListener('click', validateInputs);
+}
 
 function addQuantity(event){
   //buttonClicked is set to be the button that was clicked to call the function
@@ -78,5 +87,11 @@ function updatePrice(event){
 function validateInputs(event){
   if(html.id=='shopping-page'){
     window.location="shipping-information/index.html";
+  }
+  if(html.id==='shipping-information-page'){
+    window.location="../payment-information/index.html";
+  }
+  if(html.id==='payment-information-page'){
+    window.location="../confirmation/index.html";
   }
 }
