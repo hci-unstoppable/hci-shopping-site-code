@@ -41,6 +41,8 @@ var quantityFields = document.getElementsByClassName('cart-quantity');
 
 //--------------------------------CART MANIPULATION------------------------------
 if (html.id === 'shopping-page') {
+  var nextButton = document.getElementById('continue-shipping');
+  nextButton.addEventListener('click', validateInputs)
   //Create array of all elements with class 'add-item-button'
   var addItemButtons = document.getElementsByClassName('add-item-button');
   //cycle through all elements in that array; create event listener for each
@@ -108,4 +110,10 @@ function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
   var totalTag = document.getElementById('total');
   totalTag.innerHTML = "Total: $" + subtotal;
+}
+
+function validateInputs(event){
+  if(html.id=='shopping-page'){
+    window.location="shipping-information/index.html";
+  }
 }
