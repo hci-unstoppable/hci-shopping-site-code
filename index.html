@@ -14,7 +14,6 @@
     <main id="main">
       <form name="store-items" id="store-items" action="preferences" aria-labelledby="store-items">
         <h2 id="available-store-items">Items For Sale: </h2>
-
         <fieldset name="store-item-field">
           <ol id="store-items-for-sale">
             <li>
@@ -32,12 +31,24 @@
             <li>
               <label for="napkin" id="napkin-sale">Napkins (50 ct.) $<span class="value"/>5.99</label>
               <button type="button" class="add-item-button" data-product-id="4"> +  </button>
+              <label for="mug">Mug $<span class="value"/>13.99</label>
+              <button type="button" class="add-item-button" name="addproduct1">Add to cart: </button>
+            </li>
+            <li>
+              <label for="cup">Cup $<span class="value"/>11.99</label>
+              <button type="button" class="add-item-button" name="addproduct2">Add to cart: </button>
+            </li>
+            <li>
+              <label for="table-mat">Table Mat $<span class="value"/>3.99</label>
+              <button type="button" class="add-item-button" name="addproduct3">Add to cart: </button>
+            </li>
+            <li>
+              <label for="napkin">Napkins (50 ct.) $<span class="value"/>5.99</label>
+              <button type="button" class="add-item-button" name="addproduct4">Add to cart: </button>
             </li>
           </ol>
         </fieldset>
-
           <h2 id="shopping-cart" class="shopping-cart">Items in Cart: </h2>
-
           <ol id="items-in-cart">
             <li id="item1" class="item1">
               Mug
@@ -58,6 +69,23 @@
               Napkins
                 <input class="cart-quantity" type="number" value="0"/>
                   <button type="button" class="remove-button"> - </button>
+                <input class="cart-quantity" type="number" min="0" value="0"/>
+                  <button type="button" class="remove-button" name="removeproduct1">Remove</button>
+            </li>
+            <li id="item2" class="item2">
+              Cup
+                <input class="cart-quantity" type="number" min="0" value="0"/>
+                  <button type="button" class="remove-button" name="removeproduct2">Remove</button>
+            </li>
+            <li id="item3" class="item3">
+              Table Mate
+                <input class="cart-quantity" type="number" min="0" value="0"/>
+                  <button type="button" class="remove-button" name="removeproduct3">Remove</button>
+            </li>
+            <li id="item4" class="item4">
+              Napkins
+                <input class="cart-quantity" type="number" min="0" value="0"/>
+                  <button type="button" class="remove-button" name="removeproduct4">Remove</button>
             </li>
             <!--2 lines for closing li element to leave/remind about needed price category-->
           </ol>

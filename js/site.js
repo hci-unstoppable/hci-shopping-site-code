@@ -106,5 +106,6 @@ function removeQuantity(event){
 
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
-  alert(subtotal);
+  var totalTag = document.getElementById('total');
+  totalTag.innerHTML = "Total: $" + subtotal;
 }
