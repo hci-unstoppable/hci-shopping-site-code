@@ -17,8 +17,8 @@ html {
   font-family: "Playfair Display", "Didot", Arial, sans-serif;
   font-size: 1.25em; /* 20/16 = 1.25*/
   line-height: 1.375em;  /* 22/16 = 1.375*/
-  color: #DCDCDC;
-  background-color: #062F4F;
+  color: #000000;
+  background-color: #F0F0E1;
 }
 
 header {
@@ -68,7 +68,6 @@ fieldset {
   justify-content: center;
 }
 
-#items-in-cart,
 #shipping-options {
   border: 2px solid #DCDCDC;
   padding: 1em;
@@ -80,8 +79,9 @@ fieldset {
 }
 
 .add-item-button {
-  padding: 0.5em;
-  background-color: #008000;
+  padding: 0.75em;
+  background-color: white;
+
 }
 
 
@@ -147,6 +147,8 @@ fieldset {
   width: 20%;
   margin-top: 1em;
   position: relative;
+  margin-left: 3.5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .product-section img{
   width: 100%;
@@ -154,4 +156,11 @@ fieldset {
 }
 .product-section button{
   float: right;
+  margin-right: 2%;
+}
+.product-section label, p{
+  margin-left: 3.5%
+}
+input[type=text], input[type=number], label{
+  display: block;
 }
