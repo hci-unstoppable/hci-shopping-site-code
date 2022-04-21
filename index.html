@@ -12,88 +12,65 @@
     </header>
 
     <main id="main">
-      <form name="store-items" id="store-items" action="preferences" aria-labelledby="store-items">
+      <form name="store-items" id="store-items" action="#" aria-labelledby="store-items">
         <h2 id="available-store-items">Items For Sale: </h2>
         <fieldset name="store-item-field">
           <ol id="store-items-for-sale">
-            <li>
-              <label for="mug" id="mug-sale">Mug $<span class="value"/>13.99</label>
-              <button type="button" class="add-item-button" data-product-id="1"> + </button>
+            <li class="product-section">
+              <img src="assets/images/mug.jpeg" alt="Mug"></img>
+              <label for="mug">Mugs $<span class="value"/>13.99</label>
+              <button type="button" class="add-item-button" name="addproduct1">+</button>
+              <p>Description: Six ceramic mugs. Hold six fluid ounces..</p>
             </li>
-            <li>
-              <label for="cup" id="cup-sale">Cup $<span class="value"/>11.99</label>
-              <button type="button" class="add-item-button" data-product-id="2"> + </button>
+            <li class="product-section">
+              <img src ="assets/images/disposable.jpeg" alt="Disposable Cups"></img>
+              <label for="cup">Cups $<span class="value"/>11.99</label>
+              <button type="button" class="add-item-button" name="addproduct2">+</button>
+              <p>Description: Two dozen plastic cups. Hold eight fluid ounces.</p>
             </li>
-            <li>
-              <label for="table-mat" id="mat-sale">Table Mat $<span class="value"/>3.99</label>
-              <button type="button" class="add-item-button" data-product-id="3"> + </button>
-            </li>
-            <li>
-              <label for="napkin" id="napkin-sale">Napkins (50 ct.) $<span class="value"/>5.99</label>
-              <button type="button" class="add-item-button" data-product-id="4"> +  </button>
-              <label for="mug">Mug $<span class="value"/>13.99</label>
-              <button type="button" class="add-item-button" name="addproduct1">Add to cart: </button>
-            </li>
-            <li>
-              <label for="cup">Cup $<span class="value"/>11.99</label>
-              <button type="button" class="add-item-button" name="addproduct2">Add to cart: </button>
-            </li>
-            <li>
+            <li class="product-section">
+              <img src="assets/images/placemat.jpeg" alt="Table Mat"></img>
               <label for="table-mat">Table Mat $<span class="value"/>3.99</label>
-              <button type="button" class="add-item-button" name="addproduct3">Add to cart: </button>
+              <button type="button" class="add-item-button" name="addproduct3">+</button>
+              <p>Description: Single table mat. 90% cotton. 2' x 1'.</p>
             </li>
-            <li>
+            <li class="product-section">
+              <img src="assets/images/napkin.jpeg" alt="Napkins"></img>
               <label for="napkin">Napkins (50 ct.) $<span class="value"/>5.99</label>
-              <button type="button" class="add-item-button" name="addproduct4">Add to cart: </button>
+              <button type="button" class="add-item-button" name="addproduct4">+</button>
+              <p>Description: Set of 100% recyclable napkins. Fifty count.</p>
             </li>
           </ol>
         </fieldset>
+
           <h2 id="shopping-cart" class="shopping-cart">Items in Cart: </h2>
           <ol id="items-in-cart">
-            <li id="item1" class="item1">
-              Mug
-                <input class="cart-quantity" type="number" value="0"/>
-                <button type="button" class="remove-button"> - </button>
-            </li>
-            <li id="item2" class="item2">
-              Cup
-                <input class="cart-quantity" type="number" value="0"/>
-                  <button type="button" class="remove-button"> - </button>
-            </li>
-            <li id="item3" class="item3">
-              Table Mate
-                <input class="cart-quantity" type="number" value="0"/>
-                  <button type="button" class="remove-button"> - </button>
-            </li>
             <li id="item4" class="item4">
               Napkins
-                <input class="cart-quantity" type="number" value="0"/>
-                  <button type="button" class="remove-button"> - </button>
                 <input class="cart-quantity" type="number" min="0" value="0"/>
-                  <button type="button" class="remove-button" name="removeproduct1">Remove</button>
+                <button type="button" class="remove-button" name="removeproduct1"> - </button>
             </li>
             <li id="item2" class="item2">
               Cup
                 <input class="cart-quantity" type="number" min="0" value="0"/>
-                  <button type="button" class="remove-button" name="removeproduct2">Remove</button>
+                  <button type="button" class="remove-button" name="removeproduct2"> - </button>
             </li>
             <li id="item3" class="item3">
               Table Mate
                 <input class="cart-quantity" type="number" min="0" value="0"/>
-                  <button type="button" class="remove-button" name="removeproduct3">Remove</button>
+                  <button type="button" class="remove-button" name="removeproduct3"> - </button>
             </li>
             <li id="item4" class="item4">
               Napkins
                 <input class="cart-quantity" type="number" min="0" value="0"/>
-                  <button type="button" class="remove-button" name="removeproduct4">Remove</button>
+                  <button type="button" class="remove-button" name="removeproduct4"> - </button>
             </li>
             <!--2 lines for closing li element to leave/remind about needed price category-->
           </ol>
 
           <h3 id="total"> Total: </h3>
-
-        <button type="submit" id="continue-shipping" formaction="shipping-information">Continue to Shipping Information</button>
-      </form>ormaction="shipping-information">Continue to Shipping Information</button>
+        <input type="submit" id="continue-shipping" value="Continue to Shipping Information">
+      </form>
     </main>
     <script src="js/site.js"></script>
   </body>

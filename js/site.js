@@ -1,46 +1,11 @@
-/*const validate = function(ev){
-  if (html.id === "shipping-information-page") {
-      let failure = []
-      //for select statements
-      let select = document.getElementById('shipping-options')
-      //if it's the first option, output an error
-      if (select.selectedIndex === 0) {
-        failure.push({input:'shipping-options', msg:'Three Options Available'})
-      }
-    return failure;
-  }
-}
-
-if (html.id === "personal-information-page") {
-  const name = document.getElementById('full-name')
-  const email = document.getElementById('email')
-  const phone = document.getElementById('phone')
-  const form = document.getElementById('personal-information')
-  const errorElement = document.getElementById('error')
-
-  form.addEventListener('submit', (e) => {
-    let error = []
-    if (name.value === '') {
-      error.push('Name is required')
-    }
-
-    if (phone.value.length <= 9 || phone.value.length > 12) {
-      error.push("Not a Real Phone Number")
-    }
-
-    if (error.length > 0) {
-      e.preventDefault()
-      errorElement.innerText = error.join(', ')
-    }
-  })
-}*/
-
 var html = document.querySelector('html');
 //create array of the quantity fields
 var quantityFields = document.getElementsByClassName('cart-quantity');
 
 //--------------------------------CART MANIPULATION------------------------------
 if (html.id === 'shopping-page') {
+  var nextButton = document.getElementById('continue-shipping');
+  nextButton.addEventListener('click', validateInputs)
   //Create array of all elements with class 'add-item-button'
   var addItemButtons = document.getElementsByClassName('add-item-button');
   //cycle through all elements in that array; create event listener for each
@@ -60,6 +25,15 @@ if (html.id === 'shopping-page') {
     var field = quantityFields[i];
 	field.addEventListener('change', updatePrice);
   }
+}
+//-------------------------Event Listeners for Interpage Navigation---------------------
+if(html.id === "shipping-information-page"){
+  var nextButton = document.getElementById('continue-payment');
+  nextButton.addEventListener('click', validateInputs);
+}
+if(html.id === "payment-information-page"){
+  var nextButton = document.getElementById('continue-confirmation');
+  nextButton.addEventListener('click', validateInputs);
 }
 
 function addQuantity(event){
@@ -107,5 +81,18 @@ function removeQuantity(event){
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
   var totalTag = document.getElementById('total');
+  window.localStorage.setItem('subtotal', subtotal);
   totalTag.innerHTML = "Total: $" + subtotal;
+}
+
+function validateInputs(event){
+  if(html.id=='shopping-page'){
+    window.location="shipping-information/index.html";
+  }
+  if(html.id==='shipping-information-page'){
+    window.location="../payment-information/index.html";
+  }
+  if(html.id==='payment-information-page'){
+    window.location="../confirmation/index.html";
+  }
 }
