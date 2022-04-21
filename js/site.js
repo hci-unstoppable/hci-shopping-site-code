@@ -30,6 +30,7 @@ if (html.id === 'shopping-page') {
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
+  alert(window.localStorage.getItem('subtotal'));
 }
 if(html.id === "payment-information-page"){
   var nextButton = document.getElementById('continue-confirmation');
@@ -81,6 +82,7 @@ function removeQuantity(event){
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
   var totalTag = document.getElementById('total');
+  window.localStorage.setItem('subtotal', subtotal);
   totalTag.innerHTML = "Total: $" + subtotal;
 }
 
