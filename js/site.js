@@ -30,7 +30,6 @@ if (html.id === 'shopping-page') {
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
-  alert(window.localStorage.getItem('subtotal'));
 }
 if(html.id === "payment-information-page"){
   var nextButton = document.getElementById('continue-confirmation');
