@@ -84,9 +84,11 @@ function updatePrice(event){
   window.localStorage.setItem('subtotal', subtotal);
   totalTag.innerHTML = "Total: $" + subtotal;
 }
-
 function validateInputs(event){
-  if(html.id=='shopping-page'){
+  if(html.id==='shopping-page'){
+	//Convert items to array, pass into localStorage
+	var itemsBought = [quantityFields[0].value, quantityFields[1].value, quantityFields[2].value, quantityFields[3].value];
+	localStorage.setItem("itemsBought", JSON.stringify(itemsBought));
     window.location="shipping-information/index.html";
   }
   if(html.id==='shipping-information-page'){
