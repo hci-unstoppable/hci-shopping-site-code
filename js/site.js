@@ -129,3 +129,36 @@ function validateInputs(event){
     window.location="../confirmation/index.html";
   }
 }
+
+function validateCard(){
+  var cardNum = document.getElementById("card-number");
+  const validnums = new RegExp("^[0-9]{13,19}$");
+  if (!validnums.test(cardNum)){
+    alert("Please enter a valid card number.");
+    return false;
+  }
+  return luhnCheck(cardNum);
+}
+
+const luhnCheck = value => {
+  let checksum = 0;
+  let x = 1;
+
+  for (let y = value.length - 1; y >= 0; y--) {
+    let number = 0;
+    number = Number(valure.charAt(y)) * x;
+
+    if (number > 9) {
+      checksum = checksum + 1;
+      number = number - 10;
+    }
+    checksum = checksum + number;
+
+    if (x == 1) {
+      x ==2;
+    } else {
+      x = 1;
+    }
+  }
+  return (checksum % 10) == 0;
+}
