@@ -93,11 +93,11 @@ function validateInputs(event){
 }
   if(html.id==='shipping-information-page'){
   //  window.location="../payment-information/index.html";
-    var items = window.localStorage.getItem('itemsBought');
-    items = items.split(',');
-    alert(items[0]);
-    alert(items[1]);
-    alert(items[2]);
+    var itemsToSplit = window.localStorage.getItem('itemsBought');
+    var splitQuantity = items.split(',');
+    alert(splitQuantity[0]);
+    alert(splitQuantity[1]);
+    alert(splitQuantity[2]);
     alert("this alert works");
   }
   if(html.id==='payment-information-page'){
