@@ -30,6 +30,13 @@ if (html.id === 'shopping-page') {
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
+  var itemsToSplit = window.localStorage.getItem('itemsBought');
+  var quantityFormatted = itemsToSplit.replace(/"/g, '');
+  quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
+  var splitQuantity = quantityFormatted.split(',');
+
+  document.getElementById('item1').innerHTML = splitQuantity[0];
+
 }
 if(html.id === "payment-information-page"){
   var nextButton = document.getElementById('continue-confirmation');
@@ -92,16 +99,7 @@ function validateInputs(event){
   window.location="shipping-information/index.html";
 }
   if(html.id==='shipping-information-page'){
-  //  window.location="../payment-information/index.html";
-    var itemsToSplit = window.localStorage.getItem('itemsBought');
-    var quantityFormatted = itemsToSplit.replace(/"/g, '');
-    quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
-
-    var splitQuantity = quantityFormatted.split(',');
-    alert(splitQuantity[0]);
-    alert(splitQuantity[1]);
-    alert(splitQuantity[3]);
-    alert("this alert works");
+   window.location="../payment-information/index.html";
   }
   if(html.id==='payment-information-page'){
     window.location="../confirmation/index.html";
