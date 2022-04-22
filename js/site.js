@@ -27,6 +27,11 @@ if (html.id === 'shopping-page') {
   }
 }
 //-------------------------Event Listeners for Interpage Navigation---------------------
+if(html.id ==="main"){
+  var nextButton = document.getElementByID('continue-shipping')
+  nextButton.addEventListener('click', validateInputs);
+}
+
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
@@ -55,7 +60,7 @@ if(html.id === "payment-information-page"){
   document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
 }
 if(html.id === "confirmation-page"){
-//------------------------Codee for updating the cart on confirmation page from localStorage---------------  
+//------------------------Codee for updating the cart on confirmation page from localStorage---------------
   var itemsToSplit = window.localStorage.getItem('itemsBought');
   var quantityFormatted = itemsToSplit.replace(/"/g, '');
   quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
@@ -110,9 +115,16 @@ function removeQuantity(event){
 
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
+  var cartTag = document.getElementById('cart');
   var totalTag = document.getElementById('total');
-  window.localStorage.setItem('subtotal', subtotal);
-  totalTag.innerHTML = "Total: $" + subtotal;
+  var taxesTag = document.getElementById('taxes');
+  var taxIL = 0.0625;
+  var salesTax = (subtotal * taxIL).toFixed(2);
+  var roundtotal = (subtotal +(subtotal * taxIL)).toFixed(2);
+  window.localStorage.setItem('subtotal', roundtotal);
+  cartTag.innerHTML = "Cart: $" + subtotal.toFixed(2);
+  taxesTag.innerHTML = "Sales Tax: $" + salesTax;
+  totalTag.innerHTML = "Total: $" + roundtotal;
 }
 function validateInputs(event){
   if(html.id==='shopping-page'){
@@ -127,4 +139,37 @@ function validateInputs(event){
   if(html.id==='payment-information-page'){
     window.location="../confirmation/index.html";
   }
+}
+
+function validateCard(){
+  var cardNum = document.getElementById("card-number");
+  const validnums = new RegExp("^[0-9]{13,19}$");
+  if (!validnums.test(cardNum)){
+    alert("Please enter a valid card number.");
+    return false;
+  }
+  return luhnCheck(cardNum);
+}
+
+const luhnCheck = value => {
+  let checksum = 0;
+  let x = 1;
+
+  for (let y = value.length - 1; y >= 0; y--) {
+    let number = 0;
+    number = Number(valure.charAt(y)) * x;
+
+    if (number > 9) {
+      checksum = checksum + 1;
+      number = number - 10;
+    }
+    checksum = checksum + number;
+
+    if (x == 1) {
+      x ==2;
+    } else {
+      x = 1;
+    }
+  }
+  return (checksum % 10) == 0;
 }
