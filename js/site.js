@@ -92,10 +92,11 @@ function validateInputs(event){
   window.location="shipping-information/index.html";
 }
   if(html.id==='shipping-information-page'){
-    window.location="../payment-information/index.html";
+  //  window.location="../payment-information/index.html";
     var items = window.localStorage.getItem('itemsBought');
     items.split(',');
     alert(items[0]);
+    alert("this alert works");
   }
   if(html.id==='payment-information-page'){
     window.location="../confirmation/index.html";
