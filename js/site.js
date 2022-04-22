@@ -94,6 +94,7 @@ function validateInputs(event){
   if(html.id==='shipping-information-page'){
   //  window.location="../payment-information/index.html";
     var itemsToSplit = window.localStorage.getItem('itemsBought');
+    itemsToSplit.replace(/['"]+/g, '');
     var splitQuantity = itemsToSplit.split(',');
     alert(splitQuantity[0]);
     alert(splitQuantity[1]);
