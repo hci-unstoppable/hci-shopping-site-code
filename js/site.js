@@ -95,9 +95,9 @@ function validateInputs(event){
   //  window.location="../payment-information/index.html";
     var itemsToSplit = window.localStorage.getItem('itemsBought');
     const quantityFormatted = itemsToSplit.replace(/"/g, '');
-    quantityFormatted = quantityFormatted.replace(/[/g, '');
-    quantityFormatted = quantityFormatted.replace(/]/g, '');
-    
+    quantityFormatted = quantityFormatted.replace([, '');
+    quantityFormatted = quantityFormatted.replace(], '');
+
     var splitQuantity = quantityFormatted.split(',');
     alert(splitQuantity[0]);
     alert(splitQuantity[1]);
