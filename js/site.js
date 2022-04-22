@@ -111,7 +111,8 @@ function removeQuantity(event){
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
   var totalTag = document.getElementById('total');
-  var roundtotal = subtotal.toFixed(2);
+  var taxIL = 0.0625;
+  var roundtotal = (subtotal +(subtotal * taxIL)).toFixed(2);
   window.localStorage.setItem('subtotal', roundtotal);
   totalTag.innerHTML = "Total: $" + roundtotal;
 }
