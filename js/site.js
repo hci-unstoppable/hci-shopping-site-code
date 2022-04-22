@@ -89,10 +89,13 @@ function validateInputs(event){
 	//Convert items to array, pass into localStorage
 	var itemsBought = [quantityFields[0].value, quantityFields[1].value, quantityFields[2].value, quantityFields[3].value];
 	localStorage.setItem("itemsBought", JSON.stringify(itemsBought));
-    window.location="shipping-information/index.html";
-  }
+  window.location="shipping-information/index.html";
+}
   if(html.id==='shipping-information-page'){
     window.location="../payment-information/index.html";
+    var items = window.localStorage.getItem('itemsBought');
+    items.split(',');
+    alert(items[0]);
   }
   if(html.id==='payment-information-page'){
     window.location="../confirmation/index.html";
