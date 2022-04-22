@@ -110,10 +110,14 @@ fieldset {
   margin-left: 3.5%;
 }
 
+input[type=text], input[type=number], label{
+  display: block;
+}
+
 @media screen and (min-width: 480px) {
   fieldset {
     padding: .5em;
-    border: 2px solid #DCDCDC;
+    border: .125em solid #DCDCDC;
   }
 
   #shipping-address,
@@ -142,7 +146,7 @@ fieldset {
 
   #items-in-cart,
   #shipping-options {
-    border: 2px solid #DCDCDC;
+    border: .125em solid #DCDCDC;
     padding: 1em;
   }
 
@@ -164,25 +168,17 @@ fieldset {
     background-color: #008000;
   }
 
-  .product-section{
-    display: flex;
-    flex-direction: column;
+  .product-section  {
+    width: 75%;
+    margin-left: 5%;
+  }
 
+  #store-items-for-sale {
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
-  .product-section img{
-    width: 100%;
-    height: 100%;
-  }
-  .product-section button{
-    float: right;
-    margin-right: 2%;
-  }
-  .product-section label, p{
-    margin-left: 3.5%
-  }
+
   input[type=text], input[type=number], label{
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
-
 }
