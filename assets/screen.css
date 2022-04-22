@@ -79,13 +79,38 @@ fieldset {
 }
 
 .add-item-button {
-  padding: 0.75em;
-  background-color: white;
-
+  background-color: green;
+  padding: .625em 1.5em;
 }
 
+#item1,
+#item2,
+#item3,
+#item4 {
+  display: flex;
+  justify-content: center;
+}
 
-@media and (min-width: 768px) {
+#store-items-for-sale {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-section{
+  display: flex;
+  flex-direction: column;
+  padding: .625em 1.5em;
+}
+.product-section img{
+  width: 50%;
+  height: 50%;
+}
+
+.product-section label, p{
+  margin-left: 3.5%;
+}
+
+@media screen and (min-width: 480px) {
   fieldset {
     padding: .5em;
     border: 2px solid #DCDCDC;
@@ -129,7 +154,6 @@ fieldset {
     justify-content: center;
   }
 
-
   .remove-button {
     padding: 0.5em;
     background-color: #FF0000;
@@ -139,28 +163,26 @@ fieldset {
     padding: 0.5em;
     background-color: #008000;
   }
-}
-.product-section{
-  display: inline-block;
-  background-color: white;
-  color: black;
-  width: 20%;
-  margin-top: 1em;
-  position: relative;
-  margin-left: 3.5%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.product-section img{
-  width: 100%;
-  height: 50%;
-}
-.product-section button{
-  float: right;
-  margin-right: 2%;
-}
-.product-section label, p{
-  margin-left: 3.5%
-}
-input[type=text], input[type=number], label{
-  display: block;
+
+  .product-section{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .product-section img{
+    width: 100%;
+    height: 100%;
+  }
+  .product-section button{
+    float: right;
+    margin-right: 2%;
+  }
+  .product-section label, p{
+    margin-left: 3.5%
+  }
+  input[type=text], input[type=number], label{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
