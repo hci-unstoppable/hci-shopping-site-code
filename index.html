@@ -16,51 +16,64 @@
         <h2 id="available-store-items">Items For Sale: </h2>
         <fieldset name="store-item-field">
           <ol id="store-items-for-sale">
+
             <li class="product-section">
               <img src="assets/images/mug.jpeg" alt="Mug"></img>
-              <label for="mug">Mugs $<span class="value"/>13.99</label>
+              <label for="mug" class="mug-css">Mugs $<span class="value"/>13.99</label>
               <button type="button" class="add-item-button" name="addproduct1">+</button>
               <p>Description: Six ceramic mugs. Hold six fluid ounces..</p>
             </li>
             <li class="product-section">
               <img src ="assets/images/disposable.jpeg" alt="Disposable Cups"></img>
-              <label for="cup">Cups $<span class="value"/>11.99</label>
+              <label for="cup" class="cup-css">Cups $<span class="value"/>11.99</label>
               <button type="button" class="add-item-button" name="addproduct2">+</button>
               <p>Description: Two dozen plastic cups. Hold eight fluid ounces.</p>
             </li>
             <li class="product-section">
               <img src="assets/images/placemat.jpeg" alt="Table Mat"></img>
-              <label for="table-mat">Table Mat $<span class="value"/>3.99</label>
+              <label for="table-mat" class="table-mat-css">Table Mat $<span class="value"/>3.99</label>
               <button type="button" class="add-item-button" name="addproduct3">+</button>
               <p>Description: Single table mat. 90% cotton. 2' x 1'.</p>
             </li>
             <li class="product-section">
               <img src="assets/images/napkin.jpeg" alt="Napkins"></img>
-              <label for="napkin">Napkins (50 ct.) $<span class="value"/>5.99</label>
+              <label for="napkin" class="napkin-css">Napkins (50 ct.) $<span class="value"/>5.99</label>
               <button type="button" class="add-item-button" name="addproduct4">+</button>
               <p>Description: Set of 100% recyclable napkins. Fifty count.</p>
+
+            <li id="mug-sale">
+              <label for="mug"><span class="value"/></label>
+            </li>
+            <li id="cup-sale">
+              <label for="cup"><span class="value"/></label>
+            </li>
+            <li id="mat-sale">
+              <label for="table-mat"><span class="value"/></label>
+            </li>
+            <li id="napkin-sale">
+              <label for="napkin"><span class="value"/></label>
             </li>
           </ol>
         </fieldset>
 
           <h2 id="shopping-cart" class="shopping-cart">Items in Cart: </h2>
           <ol id="items-in-cart">
-            <li id="item4" class="item4">
-              Napkins
+            <li id="item4" class="itemQty">
+              Mugs
                 <input class="cart-quantity" type="number" min="0" value="0"/>
                 <button type="button" class="remove-button" name="removeproduct1"> - </button>
             </li>
-            <li id="item2" class="item2">
+            <li id="item2" class="itemQty">
               Cup
                 <input class="cart-quantity" type="number" min="0" value="0"/>
                   <button type="button" class="remove-button" name="removeproduct2"> - </button>
             </li>
-            <li id="item3" class="item3">
-              Table Mate
+            <li id="item3" class="itemQty">
+              Table Mat
                 <input class="cart-quantity" type="number" min="0" value="0"/>
                   <button type="button" class="remove-button" name="removeproduct3"> - </button>
             </li>
-            <li id="item4" class="item4">
+            <li id="item4" class="itemQty">
               Napkins
                 <input class="cart-quantity" type="number" min="0" value="0"/>
                   <button type="button" class="remove-button" name="removeproduct4"> - </button>
