@@ -1,7 +1,7 @@
 var html = document.querySelector('html');
 //create array of the quantity fields
 var quantityFields = document.getElementsByClassName('cart-quantity');
-
+var inputCardNum = document.getElementById("card-number");
 //--------------------------------CART MANIPULATION------------------------------
 if (html.id === 'shopping-page') {
   var nextButton = document.getElementById('continue-shipping');
