@@ -95,8 +95,7 @@ function validateInputs(event){
   //  window.location="../payment-information/index.html";
     var itemsToSplit = window.localStorage.getItem('itemsBought');
     var quantityFormatted = itemsToSplit.replace(/"/g, '');
-    quantityFormatted = quantityFormatted.replace(/[/, '');
-    quantityFormatted = quantityFormatted.replace(/]/, '');
+    quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
 
     var splitQuantity = quantityFormatted.split(',');
     alert(splitQuantity[0]);
