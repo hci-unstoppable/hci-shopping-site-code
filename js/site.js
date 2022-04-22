@@ -11,13 +11,13 @@ if (html.id === 'shopping-page') {
   //cycle through all elements in that array; create event listener for each
   for (var i =0; i < addItemButtons.length; i++){
     var button = addItemButtons[i];
-	button.addEventListener('click', addQuantity);
+	  button.addEventListener('click', addQuantity);
   }
   //repeat of array creation/subsequent event listener creation; this time for removing items
   var removeItemButtons = document.getElementsByClassName('remove-button');
   for (var i=0; i < removeItemButtons.length; i++){
     var button = removeItemButtons[i];
-	button.addEventListener('click', removeQuantity);
+	  button.addEventListener('click', removeQuantity);
   }
 
   //event listeners for if the incrementers on the number field are used rather than buttons
@@ -30,10 +30,40 @@ if (html.id === 'shopping-page') {
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
+//------------------------Codee for updating the cart on shipping page from localStorage---------------
+  var itemsToSplit = window.localStorage.getItem('itemsBought');
+  var quantityFormatted = itemsToSplit.replace(/"/g, '');
+  quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
+  var splitQuantity = quantityFormatted.split(',');
+  document.getElementById('item1').innerHTML = "Mugs " + splitQuantity[0];
+  document.getElementById('item2').innerHTML = "Cups " + splitQuantity[1];
+  document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
+  document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
+
 }
 if(html.id === "payment-information-page"){
   var nextButton = document.getElementById('continue-confirmation');
   nextButton.addEventListener('click', validateInputs);
+//------------------------Codee for updating the cart on payment page from localStorage---------------
+  var itemsToSplit = window.localStorage.getItem('itemsBought');
+  var quantityFormatted = itemsToSplit.replace(/"/g, '');
+  quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
+  var splitQuantity = quantityFormatted.split(',');
+  document.getElementById('item1').innerHTML = "Mugs: " + splitQuantity[0];
+  document.getElementById('item2').innerHTML = "Cups: " + splitQuantity[1];
+  document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
+  document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
+}
+if(html.id === "confirmation-page"){
+//------------------------Codee for updating the cart on confirmation page from localStorage---------------  
+  var itemsToSplit = window.localStorage.getItem('itemsBought');
+  var quantityFormatted = itemsToSplit.replace(/"/g, '');
+  quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
+  var splitQuantity = quantityFormatted.split(',');
+  document.getElementById('item1').innerHTML = "Mugs: " + splitQuantity[0];
+  document.getElementById('item2').innerHTML = "Cups: " + splitQuantity[1];
+  document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
+  document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
 }
 
 function addQuantity(event){
@@ -89,10 +119,10 @@ function validateInputs(event){
 	//Convert items to array, pass into localStorage
 	var itemsBought = [quantityFields[0].value, quantityFields[1].value, quantityFields[2].value, quantityFields[3].value];
 	localStorage.setItem("itemsBought", JSON.stringify(itemsBought));
-    window.location="shipping-information/index.html";
-  }
+  window.location="shipping-information/index.html";
+}
   if(html.id==='shipping-information-page'){
-    window.location="../payment-information/index.html";
+   window.location="../payment-information/index.html";
   }
   if(html.id==='payment-information-page'){
     window.location="../confirmation/index.html";
