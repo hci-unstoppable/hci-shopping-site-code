@@ -122,7 +122,7 @@ function updatePrice(event){
   var salesTax = (subtotal * taxIL).toFixed(2);
   var roundtotal = (subtotal +(subtotal * taxIL)).toFixed(2);
   window.localStorage.setItem('subtotal', roundtotal);
-  cartTag.innerHTML = "Cart: $" + subtotal;
+  cartTag.innerHTML = "Cart: $" + subtotal.toFixed(2);
   taxesTag.innerHTML = "Sales Tax: $" + salesTax;
   totalTag.innerHTML = "Total: $" + roundtotal;
 }
