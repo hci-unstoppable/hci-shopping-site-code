@@ -27,6 +27,11 @@ if (html.id === 'shopping-page') {
   }
 }
 //-------------------------Event Listeners for Interpage Navigation---------------------
+if(html.id ==="main"){
+  var nextButton = document.getElementByID('continue-shipping')
+  nextButton.addEventListener('click', validateInputs);
+}
+
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
@@ -110,10 +115,15 @@ function removeQuantity(event){
 
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
+  var cartTag = document.getElementById('cart');
   var totalTag = document.getElementById('total');
+  var taxesTag = document.getElementById('taxes');
   var taxIL = 0.0625;
+  var salesTax = (subtotal * taxIL).toFixed(2);
   var roundtotal = (subtotal +(subtotal * taxIL)).toFixed(2);
   window.localStorage.setItem('subtotal', roundtotal);
+  cartTag.innerHTML = "Cart: $" + subtotal;
+  taxesTag.innerHTML = "Sales Tax: $" + salesTax;
   totalTag.innerHTML = "Total: $" + roundtotal;
 }
 function validateInputs(event){
