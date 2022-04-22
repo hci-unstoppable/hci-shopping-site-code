@@ -96,6 +96,8 @@ function validateInputs(event){
     var items = window.localStorage.getItem('itemsBought');
     items.split(',');
     alert(items[0]);
+    alert(items[1]);
+    alert(items[2]);
     alert("this alert works");
   }
   if(html.id==='payment-information-page'){
