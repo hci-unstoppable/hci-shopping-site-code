@@ -55,7 +55,7 @@ if(html.id === "payment-information-page"){
   document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
 }
 if(html.id === "confirmation-page"){
-//------------------------Codee for updating the cart on confirmation page from localStorage---------------  
+//------------------------Codee for updating the cart on confirmation page from localStorage---------------
   var itemsToSplit = window.localStorage.getItem('itemsBought');
   var quantityFormatted = itemsToSplit.replace(/"/g, '');
   quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
@@ -110,9 +110,10 @@ function removeQuantity(event){
 
 function updatePrice(event){
   var subtotal = (quantityFields[0].value * 13.99) + (quantityFields[1].value * 11.99) + (quantityFields[2].value * 3.99) + (quantityFields[3].value * 5.99);
+  var roundedSub = subtotal.toFix(2);
   var totalTag = document.getElementById('total');
-  window.localStorage.setItem('subtotal', subtotal);
-  totalTag.innerHTML = "Total: $" + subtotal;
+  window.localStorage.setItem('subtotal', roundedSub);
+  totalTag.innerHTML = "Total: $" + roundedSub;
 }
 function validateInputs(event){
   if(html.id==='shopping-page'){
