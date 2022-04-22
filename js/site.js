@@ -30,11 +30,11 @@ if (html.id === 'shopping-page') {
 if(html.id === "shipping-information-page"){
   var nextButton = document.getElementById('continue-payment');
   nextButton.addEventListener('click', validateInputs);
+//------------------------Codee for updating the cart on shipping page from localStorage---------------
   var itemsToSplit = window.localStorage.getItem('itemsBought');
   var quantityFormatted = itemsToSplit.replace(/"/g, '');
   quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
   var splitQuantity = quantityFormatted.split(',');
-
   document.getElementById('item1').innerHTML = "Mugs " + splitQuantity[0];
   document.getElementById('item2').innerHTML = "Cups " + splitQuantity[1];
   document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
@@ -44,17 +44,28 @@ if(html.id === "shipping-information-page"){
 if(html.id === "payment-information-page"){
   var nextButton = document.getElementById('continue-confirmation');
   nextButton.addEventListener('click', validateInputs);
+//------------------------Codee for updating the cart on payment page from localStorage---------------
   var itemsToSplit = window.localStorage.getItem('itemsBought');
   var quantityFormatted = itemsToSplit.replace(/"/g, '');
   quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
   var splitQuantity = quantityFormatted.split(',');
-
-  document.getElementById('item1').innerHTML = "Mugs " + splitQuantity[0];
-  document.getElementById('item2').innerHTML = "Cups " + splitQuantity[1];
+  document.getElementById('item1').innerHTML = "Mugs: " + splitQuantity[0];
+  document.getElementById('item2').innerHTML = "Cups: " + splitQuantity[1];
   document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
   document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
-
 }
+if(html.id === "confirmation-page"){
+//------------------------Codee for updating the cart on confirmation page from localStorage---------------  
+  var itemsToSplit = window.localStorage.getItem('itemsBought');
+  var quantityFormatted = itemsToSplit.replace(/"/g, '');
+  quantityFormatted = quantityFormatted.replace(/[\[\]']+/g, '');
+  var splitQuantity = quantityFormatted.split(',');
+  document.getElementById('item1').innerHTML = "Mugs: " + splitQuantity[0];
+  document.getElementById('item2').innerHTML = "Cups: " + splitQuantity[1];
+  document.getElementById('item3').innerHTML = "Table Mats: " + splitQuantity[2];
+  document.getElementById('item4').innerHTML = "Napkins (50 Ct.): " + splitQuantity[3];
+}
+
 function addQuantity(event){
   //buttonClicked is set to be the button that was clicked to call the function
   var buttonClicked = event.target;
